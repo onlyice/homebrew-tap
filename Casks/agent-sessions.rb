@@ -1,9 +1,9 @@
 cask "agent-sessions" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.10.0"
-  sha256 arm:   "731145fe1c40f4c97e1b21d87e6db5c4aff94c2f253010952d7bbd0fee70a793",
-         intel: "8b107a00f66814a79a22cf6bc999a4a978332e38f9b5862dfc94c71cc3b20dc4"
+  version "1.10.1"
+  sha256 arm:   "95b84a15c4ceac2094e8097efdc73821a585aef8329fd25fa797217c34c12ad9",
+         intel: "fc1f3b866dc30251a24f813d7fe04ae28b876224ff1e0a6d1c20bef0ab19d17c"
 
   url "https://github.com/onlyice/agent-sessions/releases/download/v#{version}/Agent.Sessions-#{version}-#{arch}.dmg"
   name "Agent Sessions"
