@@ -21,10 +21,8 @@ cask "agent-sessions" do
 
   # The app is ad-hoc signed and not notarized, so the quarantine attribute
   # Homebrew sets on download would make Gatekeeper refuse to launch it.
-  postflight do
-    system_command "/usr/bin/xattr",
-                   args: ["-dr", "com.apple.quarantine", "#{appdir}/Agent Sessions.app"],
-                   sudo: false
+  postflight_steps do
+    run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "{{appdir}}/Agent Sessions.app"]
   end
 
   zap trash: [
